@@ -27,7 +27,7 @@
   </head>
   <body>
     {#- Circle that follows the cursor. Visually hidden unless JavaScript is available #}
-    {% if not page.url.match("/post/\w+") %}
+    {% if not page.filePathStem.match("/post/\w+") %}
       <div id="cursor"></div>
     {% endif %}
 

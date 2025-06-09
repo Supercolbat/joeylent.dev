@@ -2,8 +2,6 @@
 title: README
 description: New website? New website.
 date: 2025-06-08
-draft: true
-featured: false
 tags:
 - meta
 ---
