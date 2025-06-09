@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.post
+  size: Math.Infinity
+
+css:
+- page/archive.css
+js:
+- cursor.js
+---
+
+<header>
+  <h1>This is where I write stuff.</h1>
+</header>
+
+<section id="posts">
+  {%- for date, pages in pagination.items | groupByMonth -%}
+  <h2>{{ date }}</h2>
+  <ul>
+    {%- for post in pages -%}
+    <li>
+      <a href="{{ post.page.url }}">{{ post.data.title }}</a>
+      <date datetime="{{ post.page.date | htmlDateString }}">{{ post.page.date | prettyDate }}</date>
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endfor -%}
+</section>

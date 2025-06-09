@@ -1,0 +1,64 @@
+article > header * {
+  display: inline;
+
+  /* Blur in*/
+  /* filter: blur(0);
+  transition: filter 0.75s;
+
+  @starting-style {
+    filter: blur(8px);
+  } */
+}
+
+section#photos {
+  display: flex;
+  gap: 1rem;
+
+  /* Fade in */
+  img {
+    transition: opacity ease-in-out 1s;
+    opacity: 1;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
+}
+
+section#about {
+  font-size: var(--large-size);
+
+  p {
+    margin-block: 1rem;
+  }
+}
+
+article,
+section {
+  h1 {
+    line-height: 1;
+  }
+
+  p {
+    line-height: 1.2;
+  }
+}
+
+.hand-wave {
+  display: inline-block;
+  animation: hand-wave 1s ease-in-out alternate infinite;
+  animation-delay: 1.25s;
+
+  rotate: -5deg;
+
+  will-change: rotate;
+}
+
+@keyframes hand-wave {
+  from {
+    rotate: -5deg;
+  }
+  to {
+    rotate: 10deg;
+  }
+}

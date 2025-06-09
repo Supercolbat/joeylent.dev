@@ -1,0 +1,17 @@
+:root {
+  --foreground: #fff;
+  --foreground: #eff6f6;
+  --background: #1b2626;
+  --background: #2c2c2c;
+  --primary: #85adad;
+  --neutral: #888;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground: #222;
+    --background: #f2f2f2;
+    --primary: #177171;
+    --neutral: #444;
+  }
+}

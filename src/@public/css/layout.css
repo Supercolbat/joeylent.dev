@@ -1,0 +1,70 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  /* Give the content some space to breathe */
+  padding: 2rem;
+
+  /* Limit the width and center horizontally */
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
+header > nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* Separate "Home" and the page navigation links */
+  justify-content: space-between;
+
+  /* Vertically align links */
+  align-items: center;
+
+  ul {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  /* Display links in a row */
+  li {
+    display: inline;
+    margin-inline: 0.25em;
+  }
+
+  /* Increase click area of links */
+  a {
+    padding-block: 1rem;
+  }
+}
+
+article > :is(header, section) {
+  margin-top: 2rem;
+}
+
+main > footer {
+  margin-top: 2rem;
+
+  text-align: right;
+  color: var(--neutral);
+
+  p {
+    margin: 0;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0;
+}
+
+ul {
+  line-height: 1.35;
+}
+
+img {
+  width: 100%;
+  border-radius: 1rem;
+}

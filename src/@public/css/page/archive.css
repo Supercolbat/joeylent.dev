@@ -1,0 +1,20 @@
+h1 {
+  margin-bottom: 0;
+}
+
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+#posts li {
+  date {
+    color: var(--neutral);
+  }
+}
+
+footer {
+  * {
+    margin: 0.25rem;
+  }
+}

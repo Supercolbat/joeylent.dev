@@ -1,0 +1,39 @@
+{
+  "name": "joeylent.dev",
+  "author": {
+    "name": "Joey Lent",
+    "email": "me@joeylent.dev",
+    "url": "https://joeylent.dev/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Supercolbat/joeylent-dev.git"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.0",
+    "@11ty/eleventy-img": "^5.0.0",
+    "@11ty/eleventy-plugin-bundle": "^2.0.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "eleventy-plugin-future-post": "^0.0.2",
+    "eleventy-plugin-reading-time": "^0.0.1"
+  },
+  "description": "my website :)",
+  "engines": {
+    "node": ">=14"
+  },
+  "homepage": "https://github.com/Supercolbat/joeylent-dev#readme",
+  "license": "MIT",
+  "scripts": {
+    "build": "bunx @11ty/eleventy",
+    "build-ghpages": "bunx @11ty/eleventy --pathprefix=/joeylent.dev/",
+    "start": "bunx @11ty/eleventy --serve --quiet",
+    "debug": "DEBUG=Eleventy* bunx @11ty/eleventy",
+    "debugstart": "DEBUG=Eleventy* bunx @11ty/eleventy --serve --quiet",
+    "benchmark": "DEBUG=Eleventy:Benchmark* bunx @11ty/eleventy"
+  },
+  "type": "module",
+  "dependencies": {
+    "eleventy-plugin-inline-link-favicon": "^1.1.0"
+  }
+}

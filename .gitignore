@@ -1,0 +1,11 @@
+# build
+_site
+
+# javascript
+node_modules
+
+# environment
+shell.nix
+.envrc
+.direnv
+

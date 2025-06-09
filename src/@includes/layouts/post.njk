@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+
+css:
+- page/post.css
+---
+
+<header>
+  <h1>{{ title }}</h1>
+
+  {#<h2>{{ description }}</h2>#}
+
+  <time datetime="{{ date | htmlDateString }}">{{ date | prettyDate }}</time>
+
+  {#
+  <dl>
+    <dt>Published</dt>
+    <dd><time datetime="{{ date | htmlDateString }}">{{ date | prettyDate }}</time></dd>
+
+    <dt>Reading time</dt>
+    <dd>{{ content | readingTime }}</dd>
+
+    <dt>Tags</dt>
+    <dd>{{ tags | tagsString }}</dd>
+  </dl>
+  #}
+</header>
+
+<section>
+  {{ content | safe }}
+</section>

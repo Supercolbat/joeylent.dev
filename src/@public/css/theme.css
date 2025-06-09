@@ -1,0 +1,72 @@
+@media (prefers-reduced-motion) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+body {
+  background: var(--background);
+
+  color: var(--foreground);
+  font-family:
+    PP Neue Montreal,
+    sans-serif;
+  font-size: var(--body-size);
+
+  transition: color 0.3s;
+}
+
+header > h1 {
+  font-size: var(--title-size);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: var(--title-size);
+}
+
+h2 {
+  font-size: var(--large-size);
+}
+
+a {
+  color: inherit;
+
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 2px;
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+#cursor {
+  width: 32px;
+  height: 32px;
+  margin-left: -16px;
+  margin-top: -16px;
+  position: fixed;
+
+  border-radius: 50%;
+  border: 1px solid white;
+
+  mix-blend-mode: difference;
+  opacity: 0;
+
+  z-index: 999;
+
+  pointer-events: none;
+
+  transition:
+    background 0.3s,
+    transform 0.15s,
+    opacity linear 0.15s;
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}

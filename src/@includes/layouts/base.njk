@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en-us' dir='ltr'>
+  <head>
+    <title>{{title or metadata.title}}</title>
+
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	{#- Atom feed #}
+    {#-<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">}
+
+	{#- BTW, I use 11ty! #}
+    <meta name="generator" content="{{ eleventy.generator }}">
+
+    <link rel='stylesheet' href='/css/fonts.css' />
+    <link rel='stylesheet' href='/css/colors.css' />
+    <link rel='stylesheet' href='/css/layout.css' />
+    <link rel='stylesheet' href='/css/theme.css' />
+
+    {% for href in css %}
+      <link rel="stylesheet" href="/css/{{href}}" />
+    {% endfor %}
+
+	{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
+    {#-<style>{% getBundle "css" %}</style>#}
+  </head>
+  <body>
+    {#- Circle that follows the cursor. Visually hidden unless JavaScript is available #}
+    {% if not page.url.match("/post/\w+") %}
+      <div id="cursor"></div>
+    {% endif %}
+
+    <main>
+      <header>
+        <nav>
+          <a href="/">Home</a>
+          <ul>
+            <li><a href="/archive">Blog</a></li>
+            /
+            <li><a href="/projects">Projects</a></li>
+            /
+            <li><a href="/uses">Uses</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <article>
+        {{ content | safe }}
+      </article>
+
+      <footer>
+        <p>Copyright © Joey Lent. All rights reserved.</p>
+      </footer>
+    </main>
+
+    {% for src in js %}
+      <script src="/js/{{src}}"></script>
+    {% endfor %}
+  </body>
+</html>
