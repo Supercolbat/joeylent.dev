@@ -21,6 +21,10 @@ header > h1 {
   font-size: var(--title-size);
 }
 
+header > nav li:not(:last-child) {
+  content: "/";
+}
+
 h1,
 h2,
 h3,

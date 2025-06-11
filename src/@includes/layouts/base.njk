@@ -7,6 +7,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    {#- yeah... SEO #}
+    <meta name="description" content="{{ page.description or 'a front-end developer who sometimes likes graphics design... and stuff'}}">
+
 	{#- Atom feed #}
     {#-<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">}
 
@@ -37,9 +40,7 @@
           <a href="/">Home</a>
           <ul>
             <li><a href="/archive">Posts</a></li>
-            /
             <li><a href="/projects">Projects</a></li>
-            /
             <li><a href="/uses">Uses</a></li>
           </ul>
         </nav>
